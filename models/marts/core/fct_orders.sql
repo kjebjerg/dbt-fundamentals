@@ -1,9 +1,9 @@
 with orders as  (
-    select * from {{ ref('staging/jaffle_shop/stg_orders' )}}
+    select * from {{ ref('stg_orders' )}}
 ),
 
 payments as (
-    select * from {{ ref('staging/stripe/stg_payments') }}
+    select * from {{ ref('stg_payments') }}
 ),
 
 order_payments as (
